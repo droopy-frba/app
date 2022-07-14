@@ -9,28 +9,18 @@ import LinkingConfiguration from './LinkingConfiguration';
 
 export default function Navigation() {
   return (
-    <NavigationContainer
-      linking={
-        LinkingConfiguration
-      }
-    >
+    <NavigationContainer linking={LinkingConfiguration}>
       <RootNavigator />
     </NavigationContainer>
   );
 }
 
-const Stack =
-  createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen
-        name="Root"
-        component={
-          Login
-        }
-      />
+      <Stack.Screen name="Root" component={Login} />
     </Stack.Navigator>
   );
 }
