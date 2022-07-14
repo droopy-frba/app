@@ -1,3 +1,5 @@
+.env
+
 # Expo
 .expo
 __generated__
@@ -26,10 +28,20 @@ yarn-error.log
 .*.swo
 .*.swn
 .*.swm
+~formatting*
+- 
+.eslintcache
 
 # Sublime Text
 *.sublime-project
 *.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 # Xcode
 *.pbxuser
