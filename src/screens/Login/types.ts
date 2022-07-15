@@ -1,1 +1,3 @@
-export interface ILoginProps {}
+export interface ILoginProps {
+  onLogin: (email: string, password: string) => void;
+}
