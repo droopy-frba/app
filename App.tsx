@@ -3,7 +3,7 @@ import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ThemeProvider } from 'styled-components/native';
 
-import lightTheme from 'assets/theme/light';
+import lightTheme from '@assets/theme/light';
 
 import useCachedResources from './src/hooks/useCachedResources';
 import Navigation from './src/navigation';

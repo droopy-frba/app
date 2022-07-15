@@ -20,7 +20,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Login" component={LoginContainer} />
+      <Stack.Screen name="Root" component={LoginContainer} />
     </Stack.Navigator>
   );
 }
