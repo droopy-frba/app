@@ -3,10 +3,9 @@ import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ThemeProvider } from 'styled-components/native';
 
-import lightTheme from '@assets/theme/light';
-
-import useCachedResources from './src/hooks/useCachedResources';
-import Navigation from './src/navigation';
+import lightTheme from '@/assets/theme/light';
+import useCachedResources from '@/hooks/useCachedResources';
+import Navigation from '@/navigation';
 
 export default () => {
   const isLoadingComplete = useCachedResources();
