@@ -1,9 +1,9 @@
 import { AnyAction } from 'redux';
 import { all, call, put, takeLatest } from 'redux-saga/effects';
 
-import * as userActions from '@redux/actions/user';
-import * as userConstants from '@redux/constants/user';
-import * as userService from '@redux/services/user';
+import * as userActions from '@/redux/actions/user';
+import * as userConstants from '@/redux/constants/user';
+import * as userService from '@/redux/services/user';
 
 function* loginUser(action: AnyAction) {
   try {

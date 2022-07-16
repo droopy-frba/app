@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Provider as ReduxProvider } from 'react-redux';
 import { ThemeProvider } from 'styled-components/native';
 
-import lightTheme from '@assets/theme/light';
-
-import useCachedResources from './src/hooks/useCachedResources';
-import Navigation from './src/navigation';
+import lightTheme from '@/assets/theme/light';
+import useCachedResources from '@/hooks/useCachedResources';
+import Navigation from '@/navigation';
+import store from '@/redux/store';
 
 export default () => {
   const isLoadingComplete = useCachedResources();
@@ -15,12 +16,14 @@ export default () => {
     return null;
   } else {
     return (
-      <ThemeProvider theme={lightTheme}>
-        <SafeAreaProvider>
-          <Navigation />
-          <StatusBar />
-        </SafeAreaProvider>
-      </ThemeProvider>
+      <ReduxProvider store={store}>
+        <ThemeProvider theme={lightTheme}>
+          <SafeAreaProvider>
+            <Navigation />
+            <StatusBar />
+          </SafeAreaProvider>
+        </ThemeProvider>
+      </ReduxProvider>
     );
   }
 };

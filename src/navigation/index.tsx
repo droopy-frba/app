@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import LoginContainer from '@containers/Login';
+import LoginContainer from '@/containers/Login';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 

@@ -11,7 +11,6 @@ import {
 } from '@expo-google-fonts/open-sans';
 
 export default function useCachedResources() {
-  console.log('cache');
   const [isLoadingComplete, setLoadingComplete] = useState(false);
   let [fontsLoaded] = useFonts({
     OpenSans_400Regular,
