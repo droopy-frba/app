@@ -13,7 +13,7 @@ export const ButtonWrapper = styled.View`
 export const ButtonsWrapper = styled.View`
   display: flex;
   flex-direction: column;
-  margin-top: 30%;
+  margin-top: 20px;
 `;
 
 export const ForgotPassword = styled.Text`
