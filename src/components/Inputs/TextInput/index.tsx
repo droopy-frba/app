@@ -1,17 +1,16 @@
 import React from 'react';
 
-import { StyledTextInput, StyledTextInputWrapper } from './styles';
+import { StyledTextInput } from './styles';
 import { ITextInputProps } from './types';
 
 const TextInput = (props: ITextInputProps) => {
   return (
-    <StyledTextInputWrapper>
-      <StyledTextInput
-        onChange={props.onChange}
-        placeholder={props.placeholder}
-        keyboardType={props.type}
-      />
-    </StyledTextInputWrapper>
+    <StyledTextInput
+      onChangeText={props.onChange}
+      placeholder={props.placeholder}
+      keyboardType={props.type || 'default'}
+      secureTextEntry={props.password}
+    />
   );
 };
 

@@ -8,7 +8,7 @@ const LoginContainer = () => {
   const dispatch = useDispatch();
 
   const onLoginRequested = (email: string, password: string) => {
-    console.log('Logging');
+    console.log('Login email: ', email, 'Password: ', password);
     // dispatch(userActions.loginRequested(email, password));
   };
 

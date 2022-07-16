@@ -1,9 +1,10 @@
 import { KeyboardType, NativeSyntheticEvent, TextInputChangeEventData } from 'react-native';
 
 export interface ITextInputProps {
-  onChange: (e: NativeSyntheticEvent<TextInputChangeEventData>) => void;
+  onChange: (value: string) => void;
   icon: any;
-  value: string;
+  value?: string;
   placeholder: string;
-  type: KeyboardType;
+  type?: KeyboardType;
+  password?: boolean;
 }
