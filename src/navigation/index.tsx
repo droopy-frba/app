@@ -1,10 +1,10 @@
 import * as React from 'react';
 
+import LoginContainer from '@/containers/Login';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { RootStackParamList } from '../../types';
-import Login from '../screens/Login';
 import LinkingConfiguration from './LinkingConfiguration';
 
 export default function Navigation() {
@@ -20,7 +20,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Root" component={Login} />
+      <Stack.Screen name="Login" component={LoginContainer} />
     </Stack.Navigator>
   );
 }
