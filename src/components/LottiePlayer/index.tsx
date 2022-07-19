@@ -1,7 +1,6 @@
 import LottieView from 'lottie-react-native';
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 
-import PasswordLockAnimation from '../../assets/animations/register/password-lock.json';
 import { ILottiePlayerProps } from './types';
 
 const LottiePlayer = (props: ILottiePlayerProps) => {
@@ -12,11 +11,10 @@ const LottiePlayer = (props: ILottiePlayerProps) => {
       autoPlay
       ref={animation}
       style={{
-        width: 200,
-        height: 200,
-        backgroundColor: '#eee',
+        width: props.width,
+        height: props.height,
       }}
-      source={require('../../assets/animations/register/password-lock.json')}
+      source={props.src}
     />
   );
 };

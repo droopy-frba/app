@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Box from '@/components/Box';
 import Button from '@/components/Button';
 import TextInput from '@/components/Inputs/TextInput';
-import RegisterFlowLayout from '@/components/Layout/RegisterFlowLayout';
+import CurveBackgroundLayout from '@/components/Layout/CurveBackgroundLayout';
 import { useNavigation } from '@react-navigation/native';
 
 import { BoxWrapper, ButtonWrapper, ButtonsWrapper, ForgotPassword, InputWrapper } from './styles';
@@ -17,7 +17,7 @@ const Login = (props: ILoginProps) => {
   const navigation = useNavigation();
 
   return (
-    <RegisterFlowLayout>
+    <CurveBackgroundLayout>
       <BoxWrapper>
         <Box variant="light">
           <>
@@ -52,7 +52,7 @@ const Login = (props: ILoginProps) => {
           </>
         </Box>
       </BoxWrapper>
-    </RegisterFlowLayout>
+    </CurveBackgroundLayout>
   );
 };
 

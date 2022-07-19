@@ -1,32 +1,63 @@
+import { useFormik } from 'formik';
 import React from 'react';
 
+import PasswordLockAnimation from '@/assets/animations/register/password-lock.json';
 import Box from '@/components/Box';
 import Button from '@/components/Button';
-import RegisterFlowLayout from '@/components/Layout/RegisterFlowLayout';
-import LayoutTitle from '@/components/Layout/RegisterFlowLayout/components/LayoutTitle';
+import TextInput from '@/components/Inputs/TextInput';
+import CurveBackgroundLayout from '@/components/Layout/CurveBackgroundLayout';
+import LayoutTitle from '@/components/Layout/CurveBackgroundLayout/components/LayoutTitle';
 import LottiePlayer from '@/components/LottiePlayer';
+import { useNavigation } from '@react-navigation/native';
 
-import PasswordLockAnimation from '../../../assets/animations/register/password-lock.json';
-import { BoxWrapper, ButtonWrapper } from './styles';
+import { BoxWrapper, ButtonWrapper, InputWrapper, LockWrapper } from './styles';
 import { ISignupUserPasswordProps } from './types';
 
 const SingupUserPassword = (props: ISignupUserPasswordProps) => {
+  const navigation = useNavigation();
+  const passwordForm = useFormik({
+    initialValues: {
+      password: '',
+      passwordConfirmation: '',
+    },
+    onSubmit: () => {
+      console.log('submiting: ', passwordForm.values);
+      navigation.navigate('Signup - User Photo');
+    },
+  });
+
   return (
     <>
-      <RegisterFlowLayout>
+      <CurveBackgroundLayout>
         <>
           <LayoutTitle title="¡Ya casi estamos!" subtitle="Solo falta proteger tu cuenta." />
           <BoxWrapper>
             <Box>
               <>
-                <LottiePlayer src="../../assets/animations/register/password-lock.json" />
+                <LockWrapper>
+                  <LottiePlayer src={PasswordLockAnimation} width={200} height={200} />
+                </LockWrapper>
+                <InputWrapper>
+                  <TextInput
+                    onChange={passwordForm.handleChange('password')}
+                    placeholder="Contraseña"
+                    icon={{}}
+                  />
+                </InputWrapper>
+                <InputWrapper>
+                  <TextInput
+                    onChange={passwordForm.handleChange('passwordConfirmation')}
+                    placeholder="Confirmación de contraseña"
+                    icon={{}}
+                  />
+                </InputWrapper>
               </>
             </Box>
           </BoxWrapper>
         </>
-      </RegisterFlowLayout>
+      </CurveBackgroundLayout>
       <ButtonWrapper>
-        <Button title="Siguiente" onPress={() => {}} />
+        <Button title="Siguiente" onPress={passwordForm.handleSubmit} />
       </ButtonWrapper>
     </>
   );
