@@ -4,7 +4,7 @@ import { IStyledButtonProps } from './types';
 
 export const StyledText = styled.Text<IStyledButtonProps>`
   font-family: ${(props) => props.theme.FONTS.REGULAR};
-  font-size: 16px;
+  font-size: 18px;
   color: ${(props) =>
     props.inverted ? props.theme.COLORS.PRINCIPAL_300 : props.theme.COLORS.WHITE};
 `;

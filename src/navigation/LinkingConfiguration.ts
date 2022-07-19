@@ -16,6 +16,10 @@ const linking: LinkingOptions<RootStackParamList> = {
       ['Signup - Type of User']: 'Signup - Type of User',
       ['Signup - User Data']: 'Signup - User Data',
       ['Signup - User Password']: 'Signup - User Password',
+      ['Signup - User Photo']: 'Signup - User Photo',
+      ['Signup - User Photo Taken']: 'Signup - User Photo Taken',
+      ['Verification Code']: 'Verification Code',
+      ['Subscription Plans']: 'Subscription Plans',
     },
   },
 };

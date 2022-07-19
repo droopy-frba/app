@@ -18,6 +18,9 @@ export type RootStackParamList = {
   ['Signup - User Data']: NavigatorScreenParams<RootTabParamList> | undefined;
   ['Signup - User Password']: NavigatorScreenParams<RootTabParamList> | undefined;
   ['Signup - User Photo']: NavigatorScreenParams<RootTabParamList> | undefined;
+  ['Signup - User Photo Taken']: NavigatorScreenParams<RootTabParamList> | undefined;
+  ['Verification Code']: NavigatorScreenParams<RootTabParamList> | undefined;
+  ['Subscription Plans']: NavigatorScreenParams<RootTabParamList> | undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<

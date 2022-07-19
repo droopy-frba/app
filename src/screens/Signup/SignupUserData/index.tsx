@@ -4,7 +4,7 @@ import React from 'react';
 import Box from '@/components/Box';
 import Button from '@/components/Button';
 import TextInput from '@/components/Inputs/TextInput';
-import ICurveBackgroundLayout from '@/components/Layout/CurveBackgroundLayout';
+import CurveBackgroundLayout from '@/components/Layout/CurveBackgroundLayout';
 import LayoutTitle from '@/components/Layout/CurveBackgroundLayout/components/LayoutTitle';
 import { useNavigation } from '@react-navigation/native';
 
@@ -29,7 +29,7 @@ const SignUpUserData = (props: ISignupUserDataProps) => {
 
   return (
     <>
-      <ICurveBackgroundLayout>
+      <CurveBackgroundLayout>
         <>
           <LayoutTitle title="¡Genial!" subtitle="Ahora nos gustaría saber mas de vos..." />
           <BoxWrapper>
@@ -75,7 +75,7 @@ const SignUpUserData = (props: ISignupUserDataProps) => {
             </Box>
           </BoxWrapper>
         </>
-      </ICurveBackgroundLayout>
+      </CurveBackgroundLayout>
       <ButtonWrapper>
         <Button title="Siguiente" onPress={userDataForm.handleSubmit} />
       </ButtonWrapper>
