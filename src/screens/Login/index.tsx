@@ -4,6 +4,7 @@ import Box from '@/components/Box';
 import Button from '@/components/Button';
 import TextInput from '@/components/Inputs/TextInput';
 import RegisterFlowLayout from '@/components/Layout/RegisterFlowLayout';
+import { useNavigation } from '@react-navigation/native';
 
 import { BoxWrapper, ButtonWrapper, ButtonsWrapper, ForgotPassword, InputWrapper } from './styles';
 import { ILoginProps } from './types';
@@ -12,6 +13,8 @@ const Login = (props: ILoginProps) => {
   // @todo migrate to formik
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const navigation = useNavigation();
 
   return (
     <RegisterFlowLayout>
@@ -39,7 +42,11 @@ const Login = (props: ILoginProps) => {
                 <Button title="Ingresar" onPress={() => props.onLogin(email, password)} />
               </ButtonWrapper>
               <ButtonWrapper>
-                <Button inverted title="Crear cuenta" onPress={() => {}} />
+                <Button
+                  inverted
+                  title="Crear cuenta"
+                  onPress={() => navigation.navigate('Signup - Type of User')}
+                />
               </ButtonWrapper>
             </ButtonsWrapper>
           </>

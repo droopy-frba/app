@@ -13,6 +13,9 @@ const linking: LinkingOptions<RootStackParamList> = {
   config: {
     screens: {
       Login: 'Login',
+      ['Signup - Type of User']: 'Signup - Type of User',
+      ['Signup - User Data']: 'Signup - User Data',
+      ['Signup - User Password']: 'Signup - User Password',
     },
   },
 };

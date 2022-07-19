@@ -14,6 +14,9 @@ declare global {
 
 export type RootStackParamList = {
   Login: NavigatorScreenParams<RootTabParamList> | undefined;
+  ['Signup - Type of User']: NavigatorScreenParams<RootTabParamList> | undefined;
+  ['Signup - User Data']: NavigatorScreenParams<RootTabParamList> | undefined;
+  ['Signup - User Password']: NavigatorScreenParams<RootTabParamList> | undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
