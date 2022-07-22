@@ -1,9 +1,9 @@
 import React from 'react';
 import FlashMessage from 'react-native-flash-message';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { getStatusBarHeight } from 'react-native-status-bar-height';
 import { Provider as ReduxProvider } from 'react-redux';
 import { ThemeProvider } from 'styled-components/native';
-import { getStatusBarHeight } from 'react-native-status-bar-height';
 
 import lightTheme from '@/assets/theme/light';
 import useCachedResources from '@/hooks/useCachedResources';
@@ -21,7 +21,7 @@ export default () => {
         <ThemeProvider theme={lightTheme}>
           <SafeAreaProvider>
             <Navigation />
-            <FlashMessage position="top" duration={3000} statusBarHeight={getStatusBarHeight()}/>
+            <FlashMessage position="top" duration={3000} statusBarHeight={getStatusBarHeight()} />
           </SafeAreaProvider>
         </ThemeProvider>
       </ReduxProvider>

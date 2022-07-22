@@ -10,7 +10,7 @@ const Button = (props: IButtonProps) => {
   const isLoading = props.isLoading || false;
 
   return (
-    <StyledButton onPress={props.onPress} inverted={props.inverted || false}>
+    <StyledButton onPress={props.onPress} inverted={props.inverted || false} disabled={isLoading}>
       {isLoading ? (
         <ActivityIndicator
           color={props.inverted ? theme.COLORS.PRINCIPAL_300 : theme.COLORS.WHITE}
