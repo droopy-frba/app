@@ -15,7 +15,7 @@ function* loginUser(action: AnyAction) {
     );
     yield put(userActions.loginSucceded(loginResponse.user, loginResponse.token));
   } catch (error: any) {
-    yield put(userActions.loginFailed(error.data.message));
+    yield put(userActions.loginFailed(error.data));
   }
 }
 
