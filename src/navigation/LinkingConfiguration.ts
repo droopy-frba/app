@@ -8,18 +8,19 @@ import { RootStackParamList } from 'types';
 
 import { LinkingOptions } from '@react-navigation/native';
 
+import { ERoutes } from './routes';
+
 const linking: LinkingOptions<RootStackParamList> = {
   prefixes: [Linking.makeUrl('/')],
   config: {
     screens: {
-      Login: 'Login',
-      ['Signup - Type of User']: 'Signup - Type of User',
-      ['Signup - User Data']: 'Signup - User Data',
-      ['Signup - User Password']: 'Signup - User Password',
-      ['Signup - User Photo']: 'Signup - User Photo',
-      ['Signup - User Photo Taken']: 'Signup - User Photo Taken',
-      ['Verification Code']: 'Verification Code',
-      ['Subscription Plans']: 'Subscription Plans',
+      [ERoutes.Login]: ERoutes.Login,
+      [ERoutes.SignUpTypeOfUser]: ERoutes.SignUpTypeOfUser,
+      [ERoutes.SignUpUserData]: ERoutes.SignUpUserData,
+      [ERoutes.SignUpUserPassword]: ERoutes.SignUpUserPassword,
+      [ERoutes.SignupUserPhoto]: ERoutes.SignupUserPhoto,
+      [ERoutes.SignupUserPhotoTaken]: ERoutes.SignupUserPhotoTaken,
+      [ERoutes.VerificationCode]: ERoutes.VerificationCode,
     },
   },
 };

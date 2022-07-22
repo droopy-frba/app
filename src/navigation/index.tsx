@@ -12,6 +12,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { RootStackParamList } from '../../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import { ERoutes } from './routes';
 
 export default function Navigation() {
   return (
@@ -26,13 +27,13 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Login" component={LoginContainer} />
-      <Stack.Screen name="Signup - Type of User" component={SignupUserTypeContainer} />
-      <Stack.Screen name="Signup - User Data" component={SignupUserDataContainer} />
-      <Stack.Screen name="Signup - User Password" component={SignupUserPasswordContainer} />
-      <Stack.Screen name="Signup - User Photo" component={SignupUserPhotoContainer} />
-      <Stack.Screen name="Signup - User Photo Taken" component={SignupUserPhotoTakenContainer} />
-      <Stack.Screen name="Verification Code" component={VerificationCodeContainer} />
+      <Stack.Screen name={ERoutes.Login} component={LoginContainer} />
+      <Stack.Screen name={ERoutes.SignUpTypeOfUser} component={SignupUserTypeContainer} />
+      <Stack.Screen name={ERoutes.SignUpUserData} component={SignupUserDataContainer} />
+      <Stack.Screen name={ERoutes.SignUpUserPassword} component={SignupUserPasswordContainer} />
+      <Stack.Screen name={ERoutes.SignupUserPhoto} component={SignupUserPhotoContainer} />
+      <Stack.Screen name={ERoutes.SignupUserPhotoTaken} component={SignupUserPhotoTakenContainer} />
+      <Stack.Screen name={ERoutes.VerificationCode} component={VerificationCodeContainer} />
     </Stack.Navigator>
   );
 }

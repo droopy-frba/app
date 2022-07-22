@@ -4,6 +4,7 @@ import Box from '@/components/Box';
 import Button from '@/components/Button';
 import TextInput from '@/components/Inputs/TextInput';
 import CurveBackgroundLayout from '@/components/Layout/CurveBackgroundLayout';
+import { ERoutes } from '@/navigation/routes';
 import { useNavigation } from '@react-navigation/native';
 
 import { BoxWrapper, ButtonWrapper, ButtonsWrapper, ForgotPassword, InputWrapper } from './styles';
@@ -45,7 +46,7 @@ const Login = (props: ILoginProps) => {
                 <Button
                   inverted
                   title="Crear cuenta"
-                  onPress={() => navigation.navigate('Signup - Type of User')}
+                  onPress={() => navigation.navigate(ERoutes.SignUpTypeOfUser)}
                 />
               </ButtonWrapper>
             </ButtonsWrapper>

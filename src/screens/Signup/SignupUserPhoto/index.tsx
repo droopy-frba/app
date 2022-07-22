@@ -4,6 +4,7 @@ import SelfiePersonAnimation from '@/assets/animations/register/selfie-person.js
 import Button from '@/components/Button';
 import SolidBackgroundLayout from '@/components/Layout/SolidBackgroundLayout';
 import LottiePlayer from '@/components/LottiePlayer';
+import { ERoutes } from '@/navigation/routes';
 import { useNavigation } from '@react-navigation/native';
 
 import { ButtonWrapper, IdentityWrapper, Subtitle, Title } from './styles';
@@ -28,7 +29,7 @@ const SignupUserPhoto = (props: ISignupUserPhoto) => {
       <ButtonWrapper>
         <Button
           title="Tomar foto"
-          onPress={() => navigation.navigate('Signup - User Photo Taken')}
+          onPress={() => navigation.navigate(ERoutes.SignupUserPhotoTaken)}
           inverted
         />
       </ButtonWrapper>

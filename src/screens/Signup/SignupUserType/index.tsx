@@ -5,6 +5,7 @@ import FilmakerPerson from '@/assets/images/register/filmaker-person.svg';
 import Box from '@/components/Box';
 import CurveBackgroundLayout from '@/components/Layout/CurveBackgroundLayout';
 import LayoutTitle from '@/components/Layout/CurveBackgroundLayout/components/LayoutTitle';
+import { ERoutes } from '@/navigation/routes';
 import { useNavigation } from '@react-navigation/native';
 
 import { BoxWrapper, PersonWrapper, UserType } from './styles';
@@ -17,7 +18,7 @@ const SignupUserType = (props: ISignupUserTypeProps) => {
     <CurveBackgroundLayout>
       <>
         <LayoutTitle title="Para empezar..." subtitle="¿Cuál será tu rol en Droopy?" />
-        <BoxWrapper onPress={() => navigation.navigate('Signup - User Data')}>
+        <BoxWrapper onPress={() => navigation.navigate(ERoutes.SignUpUserData)}>
           <Box>
             <>
               <UserType>Camarógrafo</UserType>

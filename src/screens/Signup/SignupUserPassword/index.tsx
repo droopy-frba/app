@@ -8,6 +8,7 @@ import TextInput from '@/components/Inputs/TextInput';
 import CurveBackgroundLayout from '@/components/Layout/CurveBackgroundLayout';
 import LayoutTitle from '@/components/Layout/CurveBackgroundLayout/components/LayoutTitle';
 import LottiePlayer from '@/components/LottiePlayer';
+import { ERoutes } from '@/navigation/routes';
 import { useNavigation } from '@react-navigation/native';
 
 import { BoxWrapper, ButtonWrapper, InputWrapper, LockWrapper } from './styles';
@@ -22,7 +23,7 @@ const SingupUserPassword = (props: ISignupUserPasswordProps) => {
     },
     onSubmit: () => {
       console.log('submiting: ', passwordForm.values);
-      navigation.navigate('Signup - User Photo');
+      navigation.navigate(ERoutes.SignupUserPhoto);
     },
   });
 

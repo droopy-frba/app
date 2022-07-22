@@ -6,6 +6,7 @@ import Button from '@/components/Button';
 import TextInput from '@/components/Inputs/TextInput';
 import CurveBackgroundLayout from '@/components/Layout/CurveBackgroundLayout';
 import LayoutTitle from '@/components/Layout/CurveBackgroundLayout/components/LayoutTitle';
+import { ERoutes } from '@/navigation/routes';
 import { useNavigation } from '@react-navigation/native';
 
 import { BoxWrapper, ButtonWrapper, InputWrapper } from './styles';
@@ -23,7 +24,7 @@ const SignUpUserData = (props: ISignupUserDataProps) => {
     },
     onSubmit: () => {
       console.log('submiting: ', userDataForm.values);
-      navigation.navigate('Signup - User Password');
+      navigation.navigate(ERoutes.SignUpUserPassword);
     },
   });
 
