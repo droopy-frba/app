@@ -1,5 +1,5 @@
 import { ReactChild } from 'react';
 
-export interface IRegisterFlowLayoutProps {
+export interface ICurveBackgroundLayoutProps {
   children: ReactChild;
 }

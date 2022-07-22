@@ -7,6 +7,6 @@ export interface IBoxWrapperProps {
 }
 
 export interface IBoxProps {
-  variant: IBoxVariant;
+  variant?: IBoxVariant;
   children: ReactChild;
 }

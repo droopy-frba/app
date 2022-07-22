@@ -5,9 +5,9 @@ import { useTheme } from 'styled-components/native';
 import CurveBackground from '@/assets/images/background-curve.svg';
 
 import { CurveBackgroundWrapper, LayoutWrapper } from './styles';
-import { IRegisterFlowLayoutProps } from './types';
+import { ICurveBackgroundLayoutProps } from './types';
 
-const RegisterFlowLayout = (props: IRegisterFlowLayoutProps) => {
+const CurveBackgroundLayout = (props: ICurveBackgroundLayoutProps) => {
   const theme = useTheme();
 
   return (
@@ -25,4 +25,4 @@ const RegisterFlowLayout = (props: IRegisterFlowLayoutProps) => {
   );
 };
 
-export default RegisterFlowLayout;
+export default CurveBackgroundLayout;
