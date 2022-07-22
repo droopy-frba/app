@@ -1,5 +1,7 @@
 import * as userConstants from 'src/redux/constants/user';
 
+import { IUser } from '@/interfaces/user';
+
 export const loginRequested = (email: string, password: string) => {
   return {
     type: userConstants.USER_ON_LOGIN_REQUESTED,
@@ -8,10 +10,11 @@ export const loginRequested = (email: string, password: string) => {
   };
 };
 
-export const loginSucceded = (authToken: string) => {
+export const loginSucceded = (userLogged: IUser, token: string) => {
   return {
     type: userConstants.USER_ON_LOGIN_SUCCEEDED,
-    authToken,
+    userLogged,
+    token,
   };
 };
 
