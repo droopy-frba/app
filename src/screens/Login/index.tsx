@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useFormik } from 'formik';
+import React from 'react';
 
 import Box from '@/components/Box';
 import Button from '@/components/Button';
@@ -11,11 +12,17 @@ import { BoxWrapper, ButtonWrapper, ButtonsWrapper, ForgotPassword, InputWrapper
 import { ILoginProps } from './types';
 
 const Login = (props: ILoginProps) => {
-  // @todo migrate to formik
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
   const navigation = useNavigation();
+
+  const loginForm = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    onSubmit: () => {
+      props.onLogin(loginForm.values.email, loginForm.values.password);
+    },
+  });
 
   return (
     <CurveBackgroundLayout>
@@ -23,15 +30,11 @@ const Login = (props: ILoginProps) => {
         <Box variant="light">
           <>
             <InputWrapper>
-              <TextInput
-                onChange={(value: string) => setEmail(value)}
-                placeholder="Email"
-                icon={{}}
-              />
+              <TextInput onChange={loginForm.handleChange('email')} placeholder="Email" icon={{}} />
             </InputWrapper>
             <InputWrapper>
               <TextInput
-                onChange={(value: string) => setPassword(value)}
+                onChange={loginForm.handleChange('password')}
                 placeholder="Contraseña"
                 icon={{}}
                 password
@@ -40,12 +43,17 @@ const Login = (props: ILoginProps) => {
             <ForgotPassword>¿Ha olvidado su contraseña?</ForgotPassword>
             <ButtonsWrapper>
               <ButtonWrapper>
-                <Button title="Ingresar" onPress={() => props.onLogin(email, password)} />
+                <Button
+                  title="Ingresar"
+                  onPress={loginForm.handleSubmit}
+                  isLoading={props.isLoading}
+                />
               </ButtonWrapper>
               <ButtonWrapper>
                 <Button
                   inverted
                   title="Crear cuenta"
+                  isLoading={props.isLoading}
                   onPress={() => navigation.navigate(ERoutes.SignUpTypeOfUser)}
                 />
               </ButtonWrapper>
